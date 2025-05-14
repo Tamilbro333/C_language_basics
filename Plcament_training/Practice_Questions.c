@@ -1494,3 +1494,58 @@ int main(){
         
     }
 }
+
+
+
+
+#include<stdio.h>  // find median of array
+int main(){
+    int  n,median=0;
+    printf("Enter no.of elements: ");
+    scanf("%d",&n);
+    int arr[n];
+    printf("Enter the elements :");
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    if(n%2==0){
+        median=n/2;
+        for(int i=0;i<median;i++){
+            printf("%d %d",arr[median] , arr[median+1]);
+        }
+    }else{
+        median=n/2;
+        printf("%d",arr[median]);
+    }
+
+}
+
+
+
+#include<stdio.h> //find second largest number in an array 
+int main(){
+    int n;
+    printf("Enter no.of elements :");
+    scanf("%d",&n);
+    int arr[n];
+    printf("Enter elements : ");
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    int max=arr[0],sec=-1;
+    for(int i=1;i<n;i++){
+        if(arr[i]>max){
+            sec=max; //update sec
+            max=arr[i]; //update max
+        }else if(arr[i]>sec && arr[i]!=max){
+            sec=arr[i];
+        }
+    }
+    if (sec == -1) {
+        printf("No second largest element found.\n");
+    } else {
+        printf("The second largest element is: %d\n", sec);
+    }
+}
+
+
