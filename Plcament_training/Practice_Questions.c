@@ -1378,3 +1378,33 @@ int main(){
 }
 
 
+
+#include<stdio.h>  //Difference between max and min in array
+int main(){
+    int  n;
+    printf("Enter no.of elements: ");
+    scanf("%d",&n);
+    int arr[n];
+    printf("Enter the elements :");
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    int min=arr[0];
+    int max=arr[0];
+    for(int i=0;i<n;i++){
+        if(min>arr[i]){
+            min=arr[i];
+        }
+        else if(max<arr[i]){
+            max=arr[i];
+        }
+
+    }
+    printf("Difference between %d and %d is %d",max,min,max-min);
+
+}
+
+
+
+
+
