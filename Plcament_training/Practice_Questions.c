@@ -1463,3 +1463,34 @@ int main(){
 
 
 }
+
+
+
+#include<stdio.h> //find target element in  2D array
+int main(){
+    int r,c,target,found=0;
+    printf("Enter the no.of Row and Column: \n");
+    scanf("%d %d",&r,&c);
+    int arr[r][c];
+    for(int i=0;i<r;i++){  //create 2D array and get input
+        for(int j=0;j<c;j++){
+            printf("Enter element in %d X %d\n",i,j);
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    printf("Enter the target element to find :\n");
+    scanf("%d",&target);
+    for(int i=0;i<r;i++){
+        for(int j=0;j<c;j++){
+            if(arr[i][j]==target){ 
+                printf("Target element is found at %d X %d Index\n",i,j);
+                found=1;
+
+            }
+        }
+    }
+    if(!found){ // check target is found or not
+        printf("Target element is not found\n");
+        
+    }
+}
