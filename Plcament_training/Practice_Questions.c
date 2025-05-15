@@ -1549,3 +1549,32 @@ int main(){
 }
 
 
+
+
+#include<stdio.h> //Sum and Max of rows in 2D array
+int main(){
+    int r, c;
+    printf("Enter no.of row and column: ");
+    scanf("%d %d", &r, &c);
+    int arr[r][c];
+    for(int i = 0; i < r; i++){
+        for(int j = 0; j < c; j++){
+            printf("Enter element in %d X %d: ", i, j);
+            scanf("%d", &arr[i][j]);
+        }
+    }
+    for(int i = 0; i < r; i++){
+        int max = arr[i][0];
+        int sum = 0;
+        for(int j = 0; j < c; j++){
+            sum += arr[i][j];
+            if(arr[i][j] > max){
+                max = arr[i][j];
+            }
+        }
+        printf("Sum of row %d is %d\n", i, sum);
+        printf("Max of row %d is %d\n", i, max);
+    }
+}
+
+
