@@ -1578,3 +1578,121 @@ int main(){
 }
 
 
+
+
+#include<stdio.h> //Sum and Min of rows in 2D array
+int main(){
+    int r, c;
+    printf("Enter no.of row and column: ");
+    scanf("%d %d", &r, &c);
+    int arr[r][c];
+    for(int i = 0; i < r; i++){
+        for(int j = 0; j < c; j++){
+            printf("Enter element in %d X %d: ", i, j);
+            scanf("%d", &arr[i][j]);
+        }
+    }
+    for(int i = 0; i < r; i++){
+        int min = arr[i][0];
+        int sum = 0;
+        for(int j = 0; j < c; j++){
+            sum += arr[i][j];
+            if(arr[i][j] < min){
+                min = arr[i][j];
+            }
+        }
+        printf("Sum of row %d is %d\n", i, sum);
+        printf("Min of row %d is %d\n", i, min);
+    }
+}
+
+
+String
+"%[^\n]" get sentences as input
+"%s" get single word as input
+
+
+#include<stdio.h> //Get string as input
+int main(){
+    char arr[50]; 
+    scanf("%[^\n]", arr);
+    printf("%s", arr);
+    return 0;
+}
+
+
+
+#include<stdio.h>  //length of a string
+int main(){
+    int count=0;
+    char arr[30];
+    printf("Enter the string:");
+    scanf("%s",arr);
+    while(arr[count] != '\0'){
+        count+=1;
+    }
+    printf("%d",count);
+
+}
+
+
+
+#include<stdio.h>  //length of a string
+int main(){
+    int count=0;
+    char arr[30];
+    printf("Enter the string:");
+    scanf("%s",arr);
+    while(arr[count] != '\0'){
+        count+=1;
+    }
+    printf("%d",count);
+
+}
+
+
+#include<stdio.h>
+int main(){
+    char text[100];
+    int v=0, con=0, digit=0, sp=0;
+    printf("Enter text: ");
+    scanf("%[^\n]", text);
+    for(int i=0; text[i]!='\0'; i++){
+        char ch = text[i];
+        // Check for alphabet
+        if((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z')){
+            // Convert to lowercase if uppercase                    
+            if(ch >= 'A' && ch <= 'Z'){
+                ch = ch + ('a' - 'A');
+            }
+            if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+                v++;
+            else
+                con++;
+        }
+        else if(ch >= '0' && ch <= '9'){
+            digit++;
+        }
+        else if(ch != ' '){
+            sp++;
+        }
+    }
+    printf("Vowels: %d\nConsonants: %d\nDigits: %d\nSpecial characters: %d\n", v, con, digit, sp);
+    return 0;
+}
+
+
+#include<stdio.h> // Reverse a string
+#include <string.h>
+int main(){
+    char text[30];
+    printf("Enter a String: ");
+    scanf("%s",text);
+    printf("Reversed string: ");
+int len = strlen(text);
+for(int i = len - 1; i >= 0; i--) {
+    printf("%c", text[i]);
+}
+printf("\n");
+
+}
