@@ -1651,7 +1651,7 @@ int main(){
 }
 
 
-#include<stdio.h>
+#include<stdio.h> //count vowels,consontants,digit,speacial characters
 int main(){
     char text[100];
     int v=0, con=0, digit=0, sp=0;
@@ -1696,3 +1696,85 @@ for(int i = len - 1; i >= 0; i--) {
 printf("\n");
 
 }
+
+
+
+#include<stdio.h> //pointer concept  %p -format specifier for printing address
+int main(){
+    int a=3;
+    int *p;
+    p=&a;
+    printf("%d\n",a);
+    printf("%p\n",p);
+    printf("%d\n",*p);
+
+}
+
+
+
+#include<stdio.h> //swap of two numbers using pointers
+int swap(int *p1,int *p2){
+    int temp=*p1;
+    *p1=*p2;
+    *p2=temp;
+
+}
+int main(){
+    int a,b;
+    printf("Enter elements: ");
+    scanf("%d %d",&a,&b);
+    printf("Before swap \n");
+    printf("%d %d \n",a,b);
+    swap(&a,&b);
+    printf("After swap \n");
+    printf("%d %d \n",a,b);
+
+return 0;
+}
+
+
+
+#include<stdio.h> //Double pointer 
+int main(){
+    int a=3;
+    int *p;
+    int **q;
+    p=&a;
+    q=&p;
+    printf("%d\n",*p);
+    printf("%d\n",**q);
+
+}
+
+
+#include<stdio.h> //length of string using pointer
+int main(){
+    char s[100];
+    char *p;
+    int len=0;
+    printf("Enter string: ");
+    scanf("%s",s);
+    p = s;
+    while (*p != '\0') {
+        len++;
+        p++;
+    }
+    printf("%d",len);
+    return 0;
+}
+
+
+#include<stdio.h>
+int main(){
+    int n,min,max;
+    int *p;
+    int *q;
+    printf("Enter Size: ");
+    scanf("%d",&n);
+    int arr[n];
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    
+}
+
