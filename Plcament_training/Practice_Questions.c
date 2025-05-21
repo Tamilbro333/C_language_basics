@@ -1778,3 +1778,92 @@ int main(){
     
 }
 
+
+
+
+struct students   //struct print value
+{
+    int id;
+    char name[50];
+    float marks;
+
+};
+
+int main(){
+    struct students s1={101,"tamil",99.9};
+    printf("Id :%d\n",s1.id);
+    printf("Name :%s\n",s1.name);
+    printf("Marks :%.2f\n",s1.marks);
+
+    return 0;
+    
+}
+
+
+
+#include<stdio.h>  //convert feet and distance into feets using struct
+#include<string.h>
+struct distance {
+    float feet;
+    float inches;
+};
+int main(){
+    struct distance d;
+    printf("enter the feet and inches:");
+    scanf("%f %f",&d.feet,&d.inches);
+    printf("%.2f feet\n",(d.inches/12)+d.feet);
+
+}
+
+
+
+#include <stdio.h>  
+#include <string.h>
+
+struct book {
+    char title[50];
+    char author[50];
+    float price;
+};
+
+int main() {
+    struct book b[3];
+
+    
+    for (int i = 0; i < 3; i++) {
+        printf("Enter Title, Author, and Price for Book %d:\n", i + 1);
+        scanf("%s %s %f", b[i].title, b[i].author, &b[i].price);
+    }
+
+    
+    for (int i = 0; i < 3; i++) {
+        printf("\nBook %d Details:\n", i + 1);
+        printf("Title  : %s\n", b[i].title);
+        printf("Author : %s\n", b[i].author);
+        printf("Price  : %.2f\n", b[i].price);  
+    }
+
+    return 0;
+}
+
+
+
+
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int*arr;
+    int n  = 5;
+
+    arr = (int*)malloc(n*sizeof(int));
+    if (arr==NULL){
+        printf("memory  not allowcation!\n");
+        return  1;
+    }
+    for (int i = 0;i<n;i++)
+    arr[i] = i+1;
+    for (int i=0;i<n;i++)
+    arr[i] = i+1;
+    for (int i=0;i<n;i++);
+}
+
